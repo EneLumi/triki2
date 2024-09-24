@@ -1,3 +1,4 @@
 from django.db import models
 
-# Create your models here.
+# django teeb automaatselt databaasi. kasutataud sisseehitatud süsteemi
+
