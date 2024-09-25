@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="col-md-5 offset-md-3 text-center">
+    <h1>Register</h1>
+    <br>
+
+    <form method="post" action="">
+        {% csrf_token %} {% if form.errors %} <!--kui formil on errorid, siis näitab selle ja endif vahelist sõnumit-->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert"> <!-- bootstrapi alert -->
+            Your form has errors {% for field in form %} {% if field.errors %} <!-- kontrollib kõiki väljasid ja näitab vigu -->
+            {{ field.errors }} {% endif %} {% endfor %}
+
+            <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Close"
+            ></button> <!-- bootstrapi alerti dismiss nupp -->
+        </div>
+        {% endif %} {{ form.as_p }}
+
+        <br>
+
+        <button id="submit-button" class="btn btn-primary text-white">Register</button>
+    </form>
+</div>
+
+<br>
+<br>
+{% endblock content %}

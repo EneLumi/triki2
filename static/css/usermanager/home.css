@@ -10,12 +10,12 @@
     object-fit: cover;
 }
 
-#main-logo {
+.main-logo {
     position: static;
     top: 0;
     left: 0;
-    width: 350px;
-    height: 250px;
+    width: 600px;
+    height: 450px;
     overflow: hidden;
     z-index: 9999;
     border-radius: 10px;
