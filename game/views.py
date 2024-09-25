@@ -182,4 +182,4 @@ def result_view(request):  # tulemuste jaoks
         return redirect("start_quiz")
 
 
-from django.shortcuts import render
+

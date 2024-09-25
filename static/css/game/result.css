@@ -1,0 +1,33 @@
+table {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.title-row td {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: #007bff;
+    background-color: #bb1b1b00;
+}
+
+th {
+    text-size-adjust: auto;
+    text-align: left;
+    font-size: 120%;
+    color: #007bff;
+    font-weight: bold;
+}
+
+td {
+    box-shadow:  0 0 0 1px rgb(19, 48, 165);
+    font-size: 100%;
+
+}
+
+
+th {
+    background-color: rgba(0, 255, 255, 0);
+}

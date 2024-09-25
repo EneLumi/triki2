@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="col-md-6 offset-md-3 text-center">
+        <h1>{{ question }}</h1>
+        <p>Progress: {{ progress }}</p>
+        <p>Difficulty: {{ request.session.difficulty }}</p>
+
+        <!-- näitab taimerit -->
+        <p>Time Remaining: <span id="timer">20</span> seconds</p>
+
+        <div id="quiz-options">
+            <form id="quiz-form" method="post">
+                {% csrf_token %}
+                {% for value, label in form.choice.field.choices %}
+                <button type="button" class="quiz-option btn" data-value="{{ value }}">
+                    {{ label }}
+                </button>
+                {% endfor %}
+                <input type="hidden" name="choice" id="choice-input"/>
+                <button type="submit" class="btn btn-primary text-white" disabled id="submit-button">
+                    Submit answer
+                </button>
+            </form>
+        </div>
+    </div>
+
+     <script>
+        const correctAnswerData = "{{ request.session.correct_answer|escapejs }}";
+    </script>
+
+    <script src="{% static 'js/quiz.js' %}"></script>
+
+{% endblock %}

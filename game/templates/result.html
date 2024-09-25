@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="col-md-6 offset-md-3 text-center ">
+    <h2>Quiz completed!</h2>
+    <p>You got {{ correct_answers }} out of {{ total_questions }} correct</p>
+    <p>Your difficulty: {{ request.session.difficulty }}</p>
+    <p>Total questions: {{ total_questions }}</p>
+    <p>Your score: {{ score }}</p>
+    <br>
+    <h1>Score Breakdown:</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Questions</th>
+            <th>Points</th>
+            <th>Result</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for line in breakdown %}
+        <tr>
+            <td>{{ line.question }}</td>
+            <td>{{ line.points }}</td>
+            <td>{{ line.result }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    <a href="#" class="btn btn-primary text-white">View Leaderboard</a>
+    <br>
+    <a href="{% url 'start_quiz' %}" class="btn btn-primary text-white">Play Again</a>
+</div>
+
+{% endblock %}

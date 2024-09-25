@@ -1,0 +1,38 @@
+.quiz-option {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.quiz-option.btn {
+    background-color: #ffc107;
+    box-shadow: 0 0 0 1px rgb(19, 48, 165);
+    color: black;
+}
+
+.quiz-option.active {
+    background-color: #007bff;
+    color: black;
+}
+
+.quiz-option:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.quiz-option.btn-success {
+    background-color: #028021;
+    color: white;
+}
+
+.quiz-option.btn-danger {
+    background-color: #c61122;
+    color: white;
+}
+
+.quiz-option[disabled] {
+    cursor: not-allowed;
+    opacity: 1;
+}
