@@ -1,0 +1,24 @@
+
+#intro-video {
+    position: static;
+    width: 700px;
+    height: 700px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgb(19, 48, 165);
+    overflow: hidden;
+    z-index: 9999;
+    object-fit: cover;
+}
+
+#main-logo {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    z-index: 9999;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px rgb(19, 48, 165);
+    object-fit: cover;
+}

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from .forms import RegisterForm
+from usermanager.forms import RegisterForm
 
 
 # annan käskluse, mida näha netilehel
@@ -20,7 +20,7 @@ def login_user(request):
         if user is not None:
             login(request, user)
             messages.success(request, "You are now logged in")
-            return redirect("login")
+            return redirect("home")
         messages.error(request, "There was an error logging in. Please try again")
         return redirect("login")
     return render(request, "login.html", {})
