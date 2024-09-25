@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- see fail annab lehe, kus saab quiz-i valikud teha: kategooria valida, raskusastme ja küsimuste arvu -->
+<div class="container mt-5">
+    <div class="col-md-5 offset-md-3 text-center quiz-card">
+        <h1 class="text-center mb-5">Choose quiz settings</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.category.label_tag }}
+                {{ form.category }}
+            </div>
+            <div class="mb-3">  <!-- küsimuste arvu osa, slider -->
+                {{ form.amount.label_tag }}
+                <input
+                        type="range"
+                        id="id_amount"
+                        name="amount"
+                        min="5"
+                        max="25"
+                        step="5"
+                        value="5"
+                        oninput="updateAmount(this.value)"
+                />
+                <span id="amountValue">5</span>
+            </div>
+            <div class="mb-3">
+                {{ form.difficulty.label_tag }}
+                {{ form.difficulty }}
+            </div>
+            <button class="btn btn-primary text-white">Start quiz</button>
+        </form>
+    </div>
+</div>
+
+<script src="{% static 'js/start_quiz_slider.js' %}"></script>
+
+{% endblock %}
