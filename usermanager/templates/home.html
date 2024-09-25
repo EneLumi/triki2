@@ -10,26 +10,24 @@
     <div id="main-content" class="container" style="display: none;">
         <section class="content text-center">
             {% if user.is_authenticated %}
-                <img src="{% static 'img/logo2.png' %}" alt="TriKi2 Home Logo" id="main-logo">
-                <br>
-                <br>
-                <h1 class="heading display-4">Welcome USER</h1> <!-- hiljem asendada {{ user.username }} -->
+                <img src="{% static 'img/logo2.png' %}" alt="TriKi2 Home Logo" class="main-logo">
+                <h1 class="heading display-4 py-4">Welcome {{ user.username }}</h1>
                 <div class="button-container">
                     <a href="#"> <!-- hiljem asendada start quiz urliga -->
                         <button class="btn btn-primary text-white">Start Game</button>
                     </a>
                 </div>
             {% else %}
-                <img src="{% static 'img/logo2.png' %}" alt="TriKi2 Home Logo">
+                <img src="{% static 'img/logo2.png' %}" alt="TriKi2 Home Logo" class="main-logo">
                 <br>
                 <br>
                 <h1 class="heading display-4">You need to</h1>
                 <div class="button-container">
-                    <a href="#"> <!-- hiljem asendada õige logini urliga -->
+                    <a href="{% url 'login' %}">
                         <button class="btn btn-primary text-white">Log In</button>
                     </a>
                     <span>or</span>
-                    <a href="#"> <!-- hiljem asendada üige register urliga -->
+                    <a href="{% url 'register' %}">
                         <button class="btn btn-primary text-white">Register</button>
                     </a>
                 </div>
