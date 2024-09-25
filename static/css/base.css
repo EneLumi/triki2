@@ -1,0 +1,12 @@
+body {
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Default text color */
+}
+
+a {
+    color: #ffc107; /* Yellow accent color for links */
+}
+
+.text-yellow {
+    color: #ffc107 !important; /* Yellow accent text */
+}
