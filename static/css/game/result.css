@@ -15,10 +15,11 @@ table {
 
 th {
     text-size-adjust: auto;
-    text-align: left;
+    text-align: center;
     font-size: 120%;
     color: #007bff;
     font-weight: bold;
+    background-color: rgba(0, 255, 255, 0);
 }
 
 td {
@@ -27,7 +28,3 @@ td {
 
 }
 
-
-th {
-    background-color: rgba(0, 255, 255, 0);
-}
