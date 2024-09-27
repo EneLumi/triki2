@@ -3,14 +3,14 @@
 {% load static %}
 {% block content %}
 <div class="col-md-6 offset-md-3 text-center ">
-    <h2>Quiz completed!</h2>
+    <h1>Quiz completed!</h1>
     <p>You got {{ correct_answers }} out of {{ total_questions }} correct</p>
     <p>Your difficulty: {{ request.session.difficulty }}</p>
     <p>Total questions: {{ total_questions }}</p>
     <p>Your score: {{ score }}</p>
     <br>
-    <h1>Score Breakdown:</h1>
-    <table>
+    <h2>Score Breakdown:</h2>
+    <table class="table table-striped table-borderless">
         <thead>
         <tr>
             <th>Questions</th>
@@ -30,7 +30,7 @@
     </table>
 
 
-    <a href="{% url 'leaderboard' %}" class="btn btn-primary text-white">View Leaderboard</a>
+    <a href="{% url 'leaderboard' %}" class="btn btn-primary text-white mb-3 mt-3">View Leaderboard</a>
     <br>
     <a href="{% url 'start_quiz' %}" class="btn btn-primary text-white">Play Again</a>
 </div>
