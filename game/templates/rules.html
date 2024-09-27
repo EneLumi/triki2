@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="rules" class="col-md-8 offset-md-2 text-center">
+
+    <h1 class="heading display-4">Trivia game rules</h1>
+    <p>
+        Welcome to the best trivia game in the world - TriKi2! Test your knowledge and aim for the top of the
+        leaderboard. Here’s how the game works:</p>
+    <h2>1. Scoring system</h2>
+    <p>Your score is based on the difficulty level you choose and how quickly and accurately you answer the
+        questions.
+        <br>
+        Points per correct answer:
+        <br>
+        Easy: 10 points
+        <br>
+        Medium: 20 points
+        <br>
+        Hard: 30 points</p>
+    <h2>2. Time-up penalty</h2>
+    <p>You have 20 seconds to answer each question. If you don’t answer a question within the 20-second timer, the
+        system will mark your answer as incorrect, also show you the correct answer, and notify you with the message: "Time is up!".</p>
+    <h2>3. Streak bonuses</h2>
+    <p>Consistency pays off! Earn bonus points by getting consecutive answers right:
+        <br>
+        3 correct answers in a row: points for those 3 questions are doubled.
+        <br>
+        5 correct Answers in a row: points for those 5 questions are tripled.</p>
+    <h2>4. Leaderboard</h2>
+    <p>Compete with others and see where you stand on the leaderboard. Your score reflects not only how many
+        questions you answer correctly but also how consistently you can keep your streaks going.
+        Good luck and have fun testing your knowledge!
+    </p>
+
+</div>
+{% endblock %}

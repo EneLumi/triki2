@@ -15,20 +15,20 @@
             <ul class="navbar-nav me-auto align-items-center"> <!-- Ensuring vertical alignment -->
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Leaderboard</a>
+                    <a class="nav-link text-white" href="{% url 'leaderboard' %}">Leaderboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Your scores</a>
+                    <a class="nav-link text-white" href="{% url 'score_list' %}">Your scores</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Game rules</a>
+                    <a class="nav-link text-white" href="{% url 'rules' %}">Game rules</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Leaderboard</a>
+                    <a class="nav-link text-white" href="{% url 'leaderboard' %}">Leaderboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Game Rules</a>
+                    <a class="nav-link text-white" href="{% url 'rules' %}">Game Rules</a>
                 </li>
                 {% endif %}
             </ul>
