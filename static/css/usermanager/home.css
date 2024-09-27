@@ -22,3 +22,10 @@
     box-shadow: 0 0 0 1px rgb(19, 48, 165);
     object-fit: cover;
 }
+
+#video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

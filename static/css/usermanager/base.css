@@ -1,12 +1,23 @@
 body {
-    background-color: #ffffff; /* White background */
-    color: #000000; /* Default text color */
+    background-color: #ffffff;
+    color: #000000;
 }
 
-a {
-    color: #ffc107; /* Yellow accent color for links */
-}
 
-.table {
+#sidebar-wrapper {
     padding: 20px;
 }
+
+
+#table_sidebar {
+        border-collapse: separate; /* kindlustab, et raami saab ümaraks teha */
+        border-spacing: 0;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    #table_sidebar thead {
+        background-color: #f8f9fa;
+    }
+    #table_sidebar th, #table_sidebar td {
+        padding: 8px;
+    }
