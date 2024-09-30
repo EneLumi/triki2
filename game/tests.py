@@ -4,7 +4,7 @@ from .models import Score
 import requests
 
 
-# testib, kas skoor luuakse, loetakse, uuendatakse, kustutatakse
+# see testib, kas skoor luuakse, loetakse, uuendatakse, kustutatakse
 class ScoreModelTest(TestCase):
 
     def setUp(self):
