@@ -60,7 +60,7 @@ Enjoy the game!
 
 In order to play, you need to create a user. After that you can start a game.
 
-To start the game, follow the instructions
+To start the game, follow the instructions:
 1. Select your favorite category to start your trivia challenge
 3. Select length. Choose how many questions you want to answer
 4. Choose difficulty level
